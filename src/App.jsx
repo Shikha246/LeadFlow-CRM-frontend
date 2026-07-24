@@ -14,32 +14,46 @@ import ReportsPage from "./pages/ReportsPage";
 import Settings from "./pages/Settings";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./context/AuthContext";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ProtectedRoute from "./components/ProtectedRoute";
+
 function App() {
   return (
     <BrowserRouter>
-    <SalesAgentProvider>
-      <Routes>
-        {/* Redirect root */}
-        {/* <Route path="/" element={<Navigate to="/leads" />} /> */}
+      <AuthProvider>
+        <SalesAgentProvider>
+          <Routes>
+            {/* Public routes */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
 
-        {/* Layout wrapper */}
-        <Route element={<Layout />}>
-        <Route path="/" element={<DashboardPage />} />
-          <Route path="/sales" element={<SalesPage />} />
-          <Route path="leads" element={<LeadsPage />} />
-          <Route path="/leads/new" element={<CreateLeadPage />} />
-          <Route path="/leads/:id" element={<LeadDetails />} />
-          <Route path="/add/agents" element= {<AddAgentPage />} />
-          <Route path="/leads/status" element={<LeadStatusPage />} />
-          <Route path="/agents" element={<SalesAgentManagementPage /> } />
-          <Route path="/agent-view/:id" element={<SalesAgentView />} />
-          <Route path="/reports" element={<ReportsPage />} />
-          <Route path="/settings" element={<Settings />} />
-         
-        </Route>
-      </Routes>
-       <ToastContainer position="top-right" autoClose={3000} />
-      </SalesAgentProvider>
+            {/* Layout wrapper */}
+            <Route element={<Layout />}>
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <DashboardPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/sales" element={<SalesPage />} />
+              <Route path="leads" element={<LeadsPage />} />
+              <Route path="/leads/new" element={<CreateLeadPage />} />
+              <Route path="/leads/:id" element={<LeadDetails />} />
+              <Route path="/add/agents" element={<AddAgentPage />} />
+              <Route path="/leads/status" element={<LeadStatusPage />} />
+              <Route path="/agents" element={<SalesAgentManagementPage />} />
+              <Route path="/agent-view/:id" element={<SalesAgentView />} />
+              <Route path="/reports" element={<ReportsPage />} />
+              <Route path="/settings" element={<Settings />} />
+            </Route>
+          </Routes>
+          <ToastContainer position="top-right" autoClose={3000} />
+        </SalesAgentProvider>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

@@ -207,7 +207,7 @@ const ReportsPage = () => {
               window.innerWidth < 768 ? "1.7rem" : "2.5rem",
           }}
         >
-          📊 Anvaya CRM Reports
+          📊 LeadFlow CRM Reports
         </h1>
 
         <p
