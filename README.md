@@ -4,13 +4,13 @@ A full-stack CRM (Customer Relationship Management) application built using the 
 
 ## 🔗 Live Demo
 
-[View Live Demo](https://task-forge-frontend-lyart.vercel.app/)
+[View Live Demo](https://lead-flow-crm-frontend-main.vercel.app/login)
 
 ## 🎥 Demo Video
 
 Watch a walkthrough of all major features of the application:
 
-[Watch Demo Video](#)
+[Watch Demo Video](https://drive.google.com/file/d/1rFAa8O_2LYcFtmOx1moZbP04VuSSfkzp/view)
 
 ---
 
