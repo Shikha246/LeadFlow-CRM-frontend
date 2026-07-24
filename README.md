@@ -30,7 +30,7 @@ npm start
 ### Frontend
 
 ```bash
-git clone https://github.com/Shikha246/FE_AnvayaCRM.git
+git clone https://github.com/Shikha246/LeadFlow-CRM-frontend.git
 cd CRM_FE
 npm install
 npm run dev
@@ -440,7 +440,9 @@ Response
 
 ## 📬 Contact
 
-For bugs, issues, or feature requests, feel free to reach out via GitHub.
+For bugs, issues, or feature requests, feel free to reach out via Gmail.
+
+ramrakhyani.shikha@gmail.com
 
 ## 👩‍💻 Author
 
