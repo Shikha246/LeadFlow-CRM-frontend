@@ -1,150 +1,179 @@
-🚀 Customer Relationship Management (LeadFlow CRM)
+# 🚀 Customer Relationship Management (LeadFlow CRM)
 
 A full-stack CRM (Customer Relationship Management) application built using the MERN stack. This application helps businesses manage leads, sales agents, customer interactions, and workflows efficiently in one place.
 
-🔗 Live Demo
+## 🔗 Live Demo
 
-View Live Demo
+[View Live Demo](https://task-forge-frontend-lyart.vercel.app/)
 
-🎥 Demo Video
+## 🎥 Demo Video
 
 Watch a walkthrough of all major features of the application:
 
-Watch Demo Video
+[Watch Demo Video](#)
 
-⚡ Quick Start
+---
+
+## ⚡ Quick Start
 
 Clone the repository and run the project locally.
 
-Backend
-bash
+### Backend
+
+```bash
 git clone https://github.com/Shikha246/BE_AnvayaCRM.git
 cd BE_AnvayaCRM
 npm install
 npm start
-Frontend
-bash
+```
+
+### Frontend
+
+```bash
 git clone https://github.com/Shikha246/FE_AnvayaCRM.git
 cd CRM_FE
 npm install
 npm run dev
-🛠️ Tech Stack
+```
 
-Frontend
+---
 
-React.js
-React Router DOM
-Bootstrap
-Axios
-React Icons
-React Toastify
-React ChartJS 2
+## 🛠️ Tech Stack
 
-Backend
+**Frontend**
+- React.js
+- React Router DOM
+- Bootstrap
+- Axios
+- React Icons
+- React Toastify
+- React ChartJS 2
 
-Node.js
-Express.js
-JWT (jsonwebtoken)
-bcryptjs
+**Backend**
+- Node.js
+- Express.js
+- JWT (jsonwebtoken)
+- bcryptjs
 
-Database
+**Database**
+- MongoDB
+- Mongoose
 
-MongoDB
-Mongoose
+**Development Tools**
+- Vite
+- Git & GitHub
+- Postman
 
-Development Tools
+**Additional Libraries Used**
 
-Vite
-Git & GitHub
-Postman
+| Library | Purpose |
+|---|---|
+| Axios | Used for making API requests between the frontend and backend |
+| Bootstrap | Provides responsive and reusable UI components |
+| React Router DOM | Handles navigation and routing within the application |
+| React Icons | Adds icons to improve the user interface |
+| React Toastify | Displays success, error, and warning notifications |
+| React ChartJS 2 | Creates charts and visualizations for reports and analytics |
+| Mongoose | Simplifies MongoDB database operations and schema management |
+| jsonwebtoken | Generates and verifies JWTs for authenticated sessions |
+| bcryptjs | Hashes and verifies user passwords securely |
+| dotenv | Manages environment variables securely |
+| cors | Enables communication between frontend and backend running on different origins |
+| nodemon | Automatically restarts the server during development |
 
-Additional Libraries Used
+---
 
-Library	Purpose
-Axios	Used for making API requests between the frontend and backend
-Bootstrap	Provides responsive and reusable UI components
-React Router DOM	Handles navigation and routing within the application
-React Icons	Adds icons to improve the user interface
-React Toastify	Displays success, error, and warning notifications
-React ChartJS 2	Creates charts and visualizations for reports and analytics
-Mongoose	Simplifies MongoDB database operations and schema management
-jsonwebtoken	Generates and verifies JWTs for authenticated sessions
-bcryptjs	Hashes and verifies user passwords securely
-dotenv	Manages environment variables securely
-cors	Enables communication between frontend and backend running on different origins
-nodemon	Automatically restarts the server during development
-✨ Features
-🔐 Authentication (JWT)
-User registration and login secured with hashed passwords (bcryptjs)
-JWT issued on register/login, valid for 7 days
-GET /auth/me route to fetch the logged-in user's profile using the token
-Bearer-token based route protection via an authMiddleware
-📌 Lead Management
-Add new leads
-Edit lead information
-Delete leads
-Assign leads to sales agents
-Update lead status throughout the sales process
-Set lead priority and add tags
-👨‍💼 Sales Agent Management
-Add, update, and delete sales agents
-View leads assigned to each sales agent
-Unassign leads when required
-📝 Comments & Notes
-Add comments and notes to leads
-Keep track of customer interactions and follow-ups
-View comment history for each lead
-🔍 Filtering & Sorting
-Filter leads by status, source, priority, and assigned agent
-Sort leads for easier management
-Quickly search and find specific leads
-📊 Dashboard & Reports
-View lead statistics and status distribution
-Track lead performance using charts
-Monitor overall sales pipeline activity
-📱 Responsive User Interface
-Mobile-friendly design
-Responsive layout for desktop, tablet, and mobile devices
-🔗 REST API Integration
-Connected frontend and backend using REST APIs
-Supports complete CRUD operations
-⚡ Additional Features
-Form validation
-Real-time data updates
-Clean and easy-to-use interface
-🔐 Environment Variables
+## ✨ Features
 
-Create a .env file in the backend directory and add:
+### 🔐 Authentication (JWT)
+- User registration and login secured with hashed passwords (bcryptjs)
+- JWT issued on register/login, valid for 7 days
+- `GET /auth/me` route to fetch the logged-in user's profile using the token
+- Bearer-token based route protection via an `authMiddleware`
 
-env
+### 📌 Lead Management
+- Add new leads
+- Edit lead information
+- Delete leads
+- Assign leads to sales agents
+- Update lead status throughout the sales process
+- Set lead priority and add tags
+
+### 👨‍💼 Sales Agent Management
+- Add, update, and delete sales agents
+- View leads assigned to each sales agent
+- Unassign leads when required
+
+### 📝 Comments & Notes
+- Add comments and notes to leads
+- Keep track of customer interactions and follow-ups
+- View comment history for each lead
+
+### 🔍 Filtering & Sorting
+- Filter leads by status, source, priority, and assigned agent
+- Sort leads for easier management
+- Quickly search and find specific leads
+
+### 📊 Dashboard & Reports
+- View lead statistics and status distribution
+- Track lead performance using charts
+- Monitor overall sales pipeline activity
+
+### 📱 Responsive User Interface
+- Mobile-friendly design
+- Responsive layout for desktop, tablet, and mobile devices
+
+### 🔗 REST API Integration
+- Connected frontend and backend using REST APIs
+- Supports complete CRUD operations
+
+### ⚡ Additional Features
+- Form validation
+- Real-time data updates
+- Clean and easy-to-use interface
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the backend directory and add:
+
+```env
 MONGODB=your_mongodb_atlas_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
+```
 
-Replace your_mongodb_atlas_connection_string with your own MongoDB Atlas connection string, and your_jwt_secret_key with a secret string used to sign and verify JWTs.
+Replace `your_mongodb_atlas_connection_string` with your own MongoDB Atlas connection string, and `your_jwt_secret_key` with a secret string used to sign and verify JWTs.
 
-📡 API Reference
-🔐 Auth Routes (JWT)
-Method	Endpoint	Description
-POST	/auth/register	Register a new user and receive a JWT
-POST	/auth/login	Log in and receive a JWT
-GET	/auth/me	Get the logged-in user's profile (requires Bearer token)
+---
 
-Register
+## 📡 API Reference
+
+### 🔐 Auth Routes (JWT)
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/auth/register` | Register a new user and receive a JWT |
+| POST | `/auth/login` | Log in and receive a JWT |
+| GET | `/auth/me` | Get the logged-in user's profile (requires Bearer token) |
+
+**Register**
 
 Request
-
+```
 POST /auth/register
-json
+```
+```json
 {
   "name": "Jane Doe",
   "email": "jane@example.com",
   "password": "yourpassword"
 }
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -154,21 +183,23 @@ json
     "email": "jane@example.com"
   }
 }
+```
 
-Login
+**Login**
 
 Request
-
+```
 POST /auth/login
-json
+```
+```json
 {
   "email": "jane@example.com",
   "password": "yourpassword"
 }
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -178,17 +209,18 @@ json
     "email": "jane@example.com"
   }
 }
+```
 
-Get Logged-In User
+**Get Logged-In User**
 
 Request
-
+```
 GET /auth/me
 Authorization: Bearer <token>
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "data": {
@@ -197,25 +229,31 @@ json
     "email": "jane@example.com"
   }
 }
+```
 
-ℹ️ Note: /auth/me requires a valid Authorization: Bearer <token> header. Without it, the API responds with 401 Unauthorized.
+> ℹ️ Note: `/auth/me` requires a valid `Authorization: Bearer <token>` header. Without it, the API responds with `401 Unauthorized`.
 
-📌 Lead Routes
-Method	Endpoint	Description
-POST	/leads	Create a new lead
-GET	/leads	Get all leads
-GET	/leads/stats	Get lead statistics
-GET	/leads/:id	Get a single lead by ID
-PUT	/leads/:id	Update lead details
-DELETE	/leads/:id	Delete a lead
-PUT	/leads/unassign/:agentId	Unassign all leads from a sales agent
+---
 
-Create Lead
+### 📌 Lead Routes
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/leads` | Create a new lead |
+| GET | `/leads` | Get all leads |
+| GET | `/leads/stats` | Get lead statistics |
+| GET | `/leads/:id` | Get a single lead by ID |
+| PUT | `/leads/:id` | Update lead details |
+| DELETE | `/leads/:id` | Delete a lead |
+| PUT | `/leads/unassign/:agentId` | Unassign all leads from a sales agent |
+
+**Create Lead**
 
 Request
-
+```
 POST /leads
-json
+```
+```json
 {
   "name": "John Doe",
   "source": "Website",
@@ -225,10 +263,10 @@ json
   "timeToClose": 30,
   "priority": 1
 }
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "message": "Lead created successfully",
@@ -241,16 +279,17 @@ json
     "createdAt": "2026-05-29T10:30:15.123Z"
   }
 }
+```
 
-Get All Leads
+**Get All Leads**
 
 Request
-
+```
 GET /leads
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "count": 2,
@@ -267,16 +306,17 @@ json
     }
   ]
 }
+```
 
-Lead Statistics
+**Lead Statistics**
 
 Request
-
+```
 GET /leads/stats
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "data": {
@@ -288,27 +328,34 @@ json
     "closed": 20
   }
 }
-👨‍💼 Sales Agent Routes
-Method	Endpoint	Description
-POST	/agents	Create a new sales agent
-GET	/agents	Get all sales agents
-PUT	/agents/:id	Update sales agent details
-DELETE	/agents/:id	Delete a sales agent
+```
 
-Create Sales Agent
+---
+
+### 👨‍💼 Sales Agent Routes
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/agents` | Create a new sales agent |
+| GET | `/agents` | Get all sales agents |
+| PUT | `/agents/:id` | Update sales agent details |
+| DELETE | `/agents/:id` | Delete a sales agent |
+
+**Create Sales Agent**
 
 Request
-
+```
 POST /agents
-json
+```
+```json
 {
   "name": "Rahul Sharma",
   "email": "rahul@example.com"
 }
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "message": "Sales agent created successfully",
@@ -319,16 +366,17 @@ json
     "createdAt": "2026-05-29T10:30:15.123Z"
   }
 }
+```
 
-Get All Sales Agents
+**Get All Sales Agents**
 
 Request
-
+```
 GET /agents
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "count": 2,
@@ -345,21 +393,23 @@ json
     }
   ]
 }
+```
 
-Update Sales Agent
+**Update Sales Agent**
 
 Request
-
+```
 PUT /agents/:id
-json
+```
+```json
 {
   "name": "Rahul Kumar",
   "email": "rahulkumar@example.com"
 }
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "message": "Sales agent updated successfully",
@@ -369,24 +419,29 @@ json
     "email": "rahulkumar@example.com"
   }
 }
+```
 
-Delete Sales Agent
+**Delete Sales Agent**
 
 Request
-
+```
 DELETE /agents/:id
+```
 
 Response
-
-json
+```json
 {
   "success": true,
   "message": "Sales agent deleted successfully"
 }
-📬 Contact
+```
+
+---
+
+## 📬 Contact
 
 For bugs, issues, or feature requests, feel free to reach out via GitHub.
 
-👩‍💻 Author
+## 👩‍💻 Author
 
-Built with ❤️ by Shikha246
+Built with ❤️ by **Shikha246**
