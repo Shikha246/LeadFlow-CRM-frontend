@@ -4,7 +4,7 @@ A full-stack CRM (Customer Relationship Management) application built using the 
 
 ## 🔗 Live Demo
 
-[View Live Demo](https://lead-flow-crm-frontend-main.vercel.app/login)
+[View Live Demo](https://lead-flow-crm-frontend-main.vercel.app)
 
 ## 🎥 Demo Video
 
